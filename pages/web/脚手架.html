@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>脚手架 | 博客</title>
+    <meta name="generator" content="VuePress 1.9.7">
+    <link rel="icon" href="/blog/logo.png">
+    <meta name="description" content="博客">
+    
+    <link rel="preload" href="/blog/assets/css/0.styles.da4a0daa.css" as="style"><link rel="preload" href="/blog/assets/js/app.fad6ad10.js" as="script"><link rel="preload" href="/blog/assets/js/2.f525a9a7.js" as="script"><link rel="preload" href="/blog/assets/js/10.c487768c.js" as="script"><link rel="prefetch" href="/blog/assets/js/3.c1c27053.js"><link rel="prefetch" href="/blog/assets/js/4.b99312f2.js"><link rel="prefetch" href="/blog/assets/js/5.24e33a0d.js"><link rel="prefetch" href="/blog/assets/js/6.26cf3492.js"><link rel="prefetch" href="/blog/assets/js/7.da30cfa6.js"><link rel="prefetch" href="/blog/assets/js/8.3681bf7e.js"><link rel="prefetch" href="/blog/assets/js/9.d7b368b2.js">
+    <link rel="stylesheet" href="/blog/assets/css/0.styles.da4a0daa.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/blog/" class="home-link router-link-active"><img src="/blog/logo.png" alt="博客" class="logo"> <span class="site-name can-hide">博客</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/blog/" class="nav-link">
+  首页
+</a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/blog/" class="nav-link">
+  首页
+</a></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>web前端架构师</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/blog/pages/web/脚手架.html" class="active sidebar-link">脚手架</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/blog/pages/web/脚手架.html#vue-cli原理" class="sidebar-link">vue-cli原理</a></li><li class="sidebar-sub-header"><a href="/blog/pages/web/脚手架.html#npm包开发命令" class="sidebar-link">npm包开发命令</a></li><li class="sidebar-sub-header"><a href="/blog/pages/web/脚手架.html#npm本地开发" class="sidebar-link">npm本地开发</a></li><li class="sidebar-sub-header"><a href="/blog/pages/web/脚手架.html#npm命令行参数" class="sidebar-link">npm命令行参数</a></li></ul></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="脚手架"><a href="#脚手架" class="header-anchor">#</a> 脚手架</h1> <h2 id="vue-cli原理"><a href="#vue-cli原理" class="header-anchor">#</a> vue-cli原理</h2> <ol><li>npm install -g @vue/cli</li> <li>执行vue命令，相当于which vue,会去node全局文件夹下寻找vue</li> <li>node全局文件夹下会有vue，指向真正的vue项目，运行vue.js</li> <li>vue.js头部配置node环境变量运行，相当于node vue.js
+<blockquote><p>#!/usr/bin/env node</p></blockquote></li></ol> <h2 id="npm包开发命令"><a href="#npm包开发命令" class="header-anchor">#</a> npm包开发命令</h2> <ul><li>npm publish
+<blockquote><p>发布npm</p></blockquote></li> <li>npm install -g projectname
+<blockquote><p>在所要安装的项目文件夹下运行，npm不会联网下载，会优先找到目录下面对应的项目，会将全局npm指向该项目文件夹，起到本地调试的作用</p></blockquote></li> <li>npm link
+<blockquote><p>项目未发布时可以通过该命令进行注册成全局命令，起到本地调试的作用</p></blockquote></li> <li>npm link projectname
+<blockquote><p>用于连接本地依赖，相当于分包，无需从云端下载</p></blockquote></li> <li>npm unlink
+<blockquote><p>释放对应的npm连接</p></blockquote></li> <li>npm remove
+<blockquote><p>删除连接的依赖</p></blockquote></li></ul> <h2 id="npm本地开发"><a href="#npm本地开发" class="header-anchor">#</a> npm本地开发</h2> <ul><li>which projectname
+<blockquote><p>查询模块存放地址</p></blockquote></li> <li>cd node/node_modules
+<blockquote><p>模块地址</p></blockquote></li> <li>ll
+<blockquote><p>查看模块是否程序还是链接（链接到本地项目）</p></blockquote></li></ul> <h2 id="npm命令行参数"><a href="#npm命令行参数" class="header-anchor">#</a> npm命令行参数</h2> <ol><li>npm install option --param/-PARAM-&gt;[projectname,command,option,param]
+<blockquote><p>通过node的process模块内的argv参数获取</p></blockquote></li></ol></div> <footer class="page-edit"><!----> <div class="last-updated"><span class="prefix">lastUpdate:</span> <span class="time">6/22/2022, 11:13:46 PM</span></div></footer> <!----> </main></div><div class="global-ui"></div></div>
+    <script src="/blog/assets/js/app.fad6ad10.js" defer></script><script src="/blog/assets/js/2.f525a9a7.js" defer></script><script src="/blog/assets/js/10.c487768c.js" defer></script>
+  </body>
+</html>
